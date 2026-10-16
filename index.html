@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b1f4d">
+
+    <title>Happy 2nd Mensiversary, Michele 🤍</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS -->
+    <div id="hearts"></div>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <!-- PIN SCREEN -->
+    <div id="pinScreen">
+
+        <div class="pin-box">
+
+            <h1>🤍</h1>
+
+            <h2>Our Little Love Story</h2>
+
+            <p>Happy 2nd Mensiversary</p>
+
+            <p>Enter Our Special PIN</p>
+
+            <input
+                type="password"
+                id="pinInput"
+                readonly
+                maxlength="4"
+                placeholder="••••"
+                aria-label="Enter four-digit PIN"
+            >
+
+            <div class="keypad">
+
+                <button onclick="addPin('1')">1</button>
+                <button onclick="addPin('2')">2</button>
+                <button onclick="addPin('3')">3</button>
+
+                <button onclick="addPin('4')">4</button>
+                <button onclick="addPin('5')">5</button>
+                <button onclick="addPin('6')">6</button>
+
+                <button onclick="addPin('7')">7</button>
+                <button onclick="addPin('8')">8</button>
+                <button onclick="addPin('9')">9</button>
+
+                <button onclick="clearPin()">⌫</button>
+                <button onclick="addPin('0')">0</button>
+                <button onclick="checkPin()">🤍</button>
+
+            </div>
+
+            <p id="pinMessage" aria-live="polite"></p>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN WEBSITE -->
+    <div id="website" class="hidden">
+
+        <!-- HERO / OPENING -->
+        <section class="hero">
+
+            <p class="subtitle">A Little Celebration of Us</p>
+
+            <h1>Happy 2nd Mensiversary</h1>
+
+            <h2>My Love, Michele 🤍</h2>
+
+            <p>
+                Today is all about celebrating us and our little love story.
+                I made this little place on the internet just for you. 🤍
+            </p>
+
+            <p class="signature">
+                With love, Jestro
+            </p>
+
+            <button onclick="openHeart()">
+                Open My Heart 🤍
+            </button>
+
+        </section>
+
+        <!-- MESSAGE IN A BOTTLE -->
+        <section id="bottleSection" class="hidden">
+
+            <h2>A Message in a Bottle 🩵</h2>
+
+            <p class="tap-text">
+                A little message, made with love. Tap the bottle!
+            </p>
+
+            <div id="bottleArea">
+
+                <div id="bottle" onclick="breakBottle()">
+                    🍼
+                </div>
+
+                <div id="flowers"></div>
+
+            </div>
+
+            <div id="letterContainer">
+
+                <div class="letter-paper">
+
+                    <h3>My Dearest Love 🤍</h3>
+
+                    <div id="letterText">
+                        My Dearest Love,
+
+                        Happy 2nd Mensiversary. ❤️
+
+                        today is a little celebration of us, of the love we share, and of another beautiful month we've spent together. aku harap di perjalanan kita selanjutnya, akan ada lebih banyak happiness, laughter, and unforgettable memories yang bisa kita simpan bersama. semoga setiap hari yang kita lewati bisa membuat kita semakin mengenal, memahami, dan menyayangi satu sama lain.
+
+                        thank you for being part of my life and making my ordinary days feel more special just by being there. aku bersyukur bisa mengenal kamu, punya kamu, dan menjalani cerita ini bersama kamu. mungkin aku nggak selalu bisa mengungkapkan semuanya dengan sempurna, but i hope you can always feel how much you mean to me through all the little things i do.
+
+                        never forget how precious you are to me. jangan pernah lupa kalau kamu punya tempat yang istimewa di hati aku, dan aku harap kamu selalu merasa dicintai, dihargai, dan disayangi dengan tulus. semoga kita selalu punya alasan untuk bertahan, saling mengerti, dan tetap memilih satu sama lain, even when things don't always go as planned.
+
+                        happy 2nd mensiversary once again, my love.
+
+                        here's to us, to our little love story, and to all the beautiful chapters we have yet to write together. semoga masih ada banyak bulan dan tahun yang bisa kita rayakan, lebih banyak tawa yang kita bagi, dan lebih banyak cerita yang kita ciptakan berdua. no matter how much time passes, i hope we'll always find comfort in each other and keep growing together. i love you, more than words could ever explain. 🤍
+
+                        Forever yours,
+                        Jestro 🤍
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PHOTO GALLERY -->
+        <section class="gallery">
+
+            <p class="subtitle">Little Moments, Big Memories</p>
+
+            <h2>Our Favorite Memories 📸</h2>
+
+            <p>
+                Every little moment with you is a memory worth keeping.
+            </p>
+
+            <div class="gallery-grid">
+
+                <img src="jisoo1.jpg" alt="Our memory 1" loading="lazy">
+                <img src="jisoo2.jpg" alt="Our memory 2" loading="lazy">
+                <img src="jisoo3.jpg" alt="Our memory 3" loading="lazy">
+
+                <img src="jisoo4.jpg" alt="Our memory 4" loading="lazy">
+                <img src="jisoo5.jpg" alt="Our memory 5" loading="lazy">
+                <img src="jisoo6.jpg" alt="Our memory 6" loading="lazy">
+
+                <img src="jisoo7.jpg" alt="Our memory 7" loading="lazy">
+                <img src="jisoo8.jpg" alt="Our memory 8" loading="lazy">
+                <img src="jisoo9.jpg" alt="Our memory 9" loading="lazy">
+
+            </div>
+
+        </section>
+
+        <!-- LOVE QUIZ -->
+        <section class="quiz-section">
+
+            <p class="subtitle">How Well Do You Know Us?</p>
+
+            <h2>Our Little Love Quiz 🤍</h2>
+
+            <p>
+                Let's see how well you remember our little love story.
+                Answer all three questions correctly to unlock your special surprise!
+            </p>
+
+            <div id="quizBox">
+
+                <!-- QUESTION 1 -->
+                <div class="question active">
+
+                    <h3>1. What is my favorite color?</h3>
+
+                    <button onclick="checkAnswer(this, true)">
+                        Blue 🩵
+                    </button>
+
+                    <button onclick="checkAnswer(this, false)">
+                        Pink 🩷
+                    </button>
+
+                    <button onclick="checkAnswer(this, false)">
+                        Black 🖤
+                    </button>
+
+                </div>
+
+                <!-- QUESTION 2 -->
+                <div class="question">
+
+                    <h3>2. When did our relationship begin?</h3>
+
+                    <button onclick="checkAnswer(this, false)">
+                        14 February 2026
+                    </button>
+
+                    <button onclick="checkAnswer(this, true)">
+                        17 August 2026 🤍
+                    </button>
+
+                    <button onclick="checkAnswer(this, false)">
+                        17 September 2026
+                    </button>
+
+                </div>
+
+                <!-- QUESTION 3 -->
+                <div class="question">
+
+                    <h3>3. Who is my favorite person?</h3>
+
+                    <button onclick="checkAnswer(this, false)">
+                        My Best Friend
+                    </button>
+
+                    <button onclick="checkAnswer(this, false)">
+                        Someone Else
+                    </button>
+
+                    <button onclick="checkAnswer(this, true)">
+                        Michele, Of Course! 🤍
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- QUIZ SUCCESS -->
+            <div id="quizSuccess" class="hidden">
+
+                <h2>🎉 You Did It, My Love! 🎉</h2>
+
+                <p>
+                    You know our little story so well.
+                    Here's one more special memory, made just for you. 🤍
+                </p>
+
+                <img
+                    src="special.jpg"
+                    class="special-photo"
+                    alt="A special memory of us"
+                    loading="lazy"
+                >
+
+                <p>
+                    You will always be one of my favorite parts of life.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL MESSAGE -->
+        <section class="final">
+
+            <p class="subtitle">To My Favorite Person</p>
+
+            <h2>Happy 2nd Mensiversary 🤍</h2>
+
+            <h3>My Dearest Michele</h3>
+
+            <p>
+                Two months of us, two months of memories,
+                and so many beautiful chapters waiting to be written.
+
+                <br><br>
+
+                Thank you for being here.
+                Thank you for choosing us.
+                Thank you for being my favorite person.
+
+                <br><br>
+
+                May our love continue to grow stronger,
+                may we always find comfort in each other,
+                and may we keep choosing one another
+                through every season of life.
+
+                <br><br>
+
+                Here's to more months, more laughter,
+                more memories, and more reasons to love you.
+
+                <br><br>
+
+                I love you, more than words could ever explain.
+
+                <br><br>
+
+                Forever and always, with love.
+
+                <br><br>
+
+                Your Jestro 🤍
+            </p>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <p>Made with 🤍 by Jestro, especially for Michele.</p>
+
+            <p>Happy 2nd Mensiversary · 17 August 2026</p>
+
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+  </html>
